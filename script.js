@@ -223,7 +223,7 @@ async function startSlideShow(root) {
             if (slide.format == 'video') {
                 let vidDiv = document.createElement("video")
                 vidDiv.className = "videoSlide"
-                vidDiv.setAttribute("controls", "true")
+                vidDiv.setAttribute("controls", "false")
                 vidDiv.volume = settings.volume
                 vidDiv.src = URL.createObjectURL(await slide.file.getFile())
                 replaceSlide(root, vidDiv, toRemove.pop(), slide.scaledWidth)
